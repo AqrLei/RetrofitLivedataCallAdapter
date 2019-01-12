@@ -60,9 +60,9 @@ task makeJar(type: Copy) {
 }
 makeJar.dependsOn(build)
 
-def siteUrl = 'https://github.com/AqrLei/OpenSource'
+def siteUrl = 'https://github.com/AqrLei/RetrofitLivedataCallAdapter'
 
-def gitUrl = 'https://github.com/AqrLei/OpenSource.git'
+def gitUrl = 'https://github.com/AqrLei/RetrofitLivedataCallAdapter.git'
 
 def libName = "livedatacalladapter"
 
@@ -95,7 +95,7 @@ install {
                     }
                 }
                 scm {
-                    connection "scm:git:git://github.com/AqrLei/OpenSource.git"
+                    connection "scm:git:git://github.com/AqrLei/RetrofitLivedataCallAdapter.git"
                     url siteUrl
                 }
             }
