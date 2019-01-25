@@ -2,8 +2,6 @@ package com.aqrlei.open.retrofitlivedatacalladapter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.aqrlei.open.retrofitlivedatacalladapter.retrofitStudy.Calculate
-import com.aqrlei.open.retrofitlivedatacalladapter.retrofitStudy.Calculator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +9,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val proxyTest = Calculator.create(Calculate::class.java)
         contentTv.setOnClickListener {
             ArticleRepository().fetchPhoneInfo("405", "1").observe { data ->
                 contentTv.append("\nOBSERVER")
@@ -25,7 +22,6 @@ class MainActivity : AppCompatActivity() {
                 contentTv.append("\nerrorCode: ${data?.response?.errorCode}")
                 contentTv.append("\nerrorMsg: ${data?.response?.errorMsg}")
                 contentTv.append("\n${data?.error?.message}")
-                proxyTest.add(0, 0)
             }
         }
     }
