@@ -15,8 +15,8 @@ android {
     defaultConfig {
         minSdkVersion buildVersion.min
         targetSdkVersion buildVersion.target
-        versionCode 6
-        versionName "0.0.6"
+        versionCode 7
+        versionName "0.0.7"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -69,7 +69,7 @@ def libName = "livedatacalladapter"
 
 group = "com.aqrlei.opensource"
 
-version = "0.0.6"
+version = "0.0.7"
 
 install {
     repositories.mavenInstaller {
